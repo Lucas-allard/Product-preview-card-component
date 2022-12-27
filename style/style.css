@@ -154,11 +154,13 @@ article {
         align-items: center;
         justify-content: center;
         width: auto;
+        margin: 10px;
     }
 
     .card__right,
     .card__left {
         max-width: 680px;
+        width: 100%;
     }
 
     .card__right {
@@ -175,6 +177,7 @@ article {
     }
 
     .card__right .card__rightHeader h1 {
+        font-size: 3rem;
         line-height: initial;
         letter-spacing: initial;
         word-spacing: initial;
@@ -182,7 +185,8 @@ article {
 
     .card__right .card__rightContent p {
         color: var(--secondary-text-color);
-        line-height: initial;
+        word-spacing: 0.5rem;
+
     }
 
     .card__left > picture > img {
