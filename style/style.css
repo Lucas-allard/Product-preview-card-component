@@ -1,0 +1,193 @@
+:root {
+    --primary-bg-color: hsl(30, 38%, 92%);
+    --primary-text-color: hsl(212, 21%, 14%);
+    --primary-cta-color: hsl(158, 36%, 37%);
+    --primary-font-family: 'Montserrat', sans-serif;
+
+    --secondary-bg-color: hsl(0, 0%, 100%);
+    --secondary-text-color: hsl(228, 12%, 48%);
+    --secondary-font-family: 'Fraunces', serif;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--primary-font-family);
+    background-color: var(--primary-bg-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font-family);
+    color: var(--primary-text-color);
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+article {
+    width: 40%;
+    display: flex;
+    border-radius: 10px;
+}
+
+.card__left, .card__right {
+    width: 50%
+}
+
+.card__left > picture > img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.card__right {
+    padding: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card__right .card__rightHeader p,
+.card__right .card__rightHeader h1 {
+    padding-bottom: 20px;
+}
+
+.card__right .card__rightHeader h1 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 1rem;
+    font-weight: 700;
+}
+
+.card__right .card__rightHeader p {
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+}
+
+.card__right .card__rightContent {
+    padding-bottom: 10px;
+}
+
+.card__right .card__rightContent p {
+    color: var(--secondary-text-color);
+    line-height: 2.4rem;
+}
+
+.card__right .card___rightPrice {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+
+}
+
+.card__right .card___rightPrice p {
+    margin-right: 20px;
+}
+
+.card__right .card___rightPrice p:first-child {
+    color: var(--primary-cta-color);
+    font-size: 2.4rem;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+}
+
+.card__right .card___rightPrice p:last-child {
+    color: var(--secondary-text-color);
+    text-decoration: line-through;
+
+}
+
+.card__right .card__rightCta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-cta-color);
+    padding: 10px;
+    border-radius: 10px
+}
+
+.card__right .card__rightCta:hover {
+    background-color: var(--secondary-text-color);
+}
+
+.card__right .card__rightCta svg,
+.card__right .card__rightCta button {
+    margin: 0 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--secondary-bg-color);
+}
+
+@media (max-width: 1400px) {
+    article {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .card__right,
+    .card__left {
+        max-width: 680px;
+    }
+
+    .card__right {
+        border-top-right-radius: initial;
+        border-bottom-left-radius: 10px;
+        background-color: var(--secondary-bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .card__right .card__rightHeader p {
+        padding-bottom: 1rem;
+    }
+
+    .card__right .card__rightHeader h1 {
+        line-height: initial;
+        letter-spacing: initial;
+        word-spacing: initial;
+    }
+
+    .card__right .card__rightContent p {
+        color: var(--secondary-text-color);
+        line-height: initial;
+    }
+
+    .card__left > picture > img {
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: initial;
+        height: 100%;
+    }
+}
